@@ -10,7 +10,9 @@ const forecast = (latitude, longitude, callback) => {
         } else {
             const weather = body.current.weather_descriptions[0] + 
             '. It is currently ' + body.current.temperature + 
-            ' degress out. It feels like ' + body.current.feelslike + ' degress out.'
+            ' degress out. It feels like ' + body.current.feelslike +
+            ' degress out. Humidity is '  + body.current.humidity + 
+            '%'
             callback(undefined,weather)
         }
     })
